@@ -9,10 +9,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Redirect index to the todolist as it is the true homepage
-    path('', lambda request: redirect('/todolist/', permanent=True)),
+    path('', lambda request: redirect('/home/', permanent=True)),
     
     # To Do List App
     path('todolist/', include('todolist.urls')),
+
+    # Home Page App
+    path('home/', include('homepage.urls'))
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

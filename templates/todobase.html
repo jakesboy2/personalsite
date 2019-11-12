@@ -44,11 +44,45 @@
         
         <!-- Navbar links-->
         <div class="nav-links">
-            <a href="//github.com/jakesboy2" target="_blank">Github</a>
-            <a href="#" class="openb">About Me</a>
-        </div>
+          <a href="//github.com/jakesboy2" target="_blank">Github</a>
+          {% if user.is_authenticated %}
+            <a href="{{ app_url }}logout">Logout</a>
+          {% else %}
+            <a href="#" class="openb">Sign In</a>
+          {% endif %}
+      </div>
+
+        
+      <!-- Login Modal -->
+      <div class="login-modal-overlay">
+        <div class="login-modal">
+          <h4>Sign In</h4>
+          <h2>To gain access to exclusive features, please login or make an account below.</h2>
+          <form action="{{ app_url }}login" method="post">
+            {% csrf_token %}
+            <div class="group">
+              <input class="u-full-width" type="text" name="username" id="usernameField" placeholder="Username" required>
+            </div>
+
+            <div class="group">
+              <input class="u-full-width" type="password" name="password" id="passwordField" placeholder="Password" required>
+            </div>
+            <div class="row">
+                <div class="three columns">
+                  <a href="#">Register</a>
+                </div>
+                <div class="six columns">
+                  <a href="#">Forgot Password</a>
+                  </div>
+            </div>
+            <br>
+            <div class="row">
+              <input class="button-primary" type="submit" value="login">
+            </div>
+        </form>
+      </div>
       
-    </div>
+      </div>
 
   <!-- Content that child html files supply-->
   {% block content %}

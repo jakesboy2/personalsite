@@ -10,7 +10,7 @@ import datetime
 # Render the home page
 def index(request):
     app_url = request.path
-    return render(request, 'home.html', {'app_url': app_url})
+    return render(request, 'todohome.html', {'app_url': app_url})
 
 # Log the user in
 class LoginUser(View):
