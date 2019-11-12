@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'todolist.apps.TodolistConfig',
     'homepage.apps.HomePageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,6 +125,5 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
-AUTH_USER_MODEL = 'todolist.CustomUser'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'

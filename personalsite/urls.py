@@ -8,12 +8,9 @@ urlpatterns = [
     # Admin Panel
     path('admin/', admin.site.urls),
 
-    # Redirect index to the todolist as it is the true homepage
+    # Redirect index to the homepage as it is the true homepage
     path('', lambda request: redirect('/home/', permanent=True)),
     
-    # To Do List App
-    path('todolist/', include('todolist.urls')),
-
     # Home Page App
     path('home/', include('homepage.urls'))
 
