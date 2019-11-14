@@ -8,25 +8,26 @@
 			<h1>Jacob Cole Waldrip</h1>
 			<p>"Don't expect to be motivated every day to make things happen.<br>You won't be. Don’t count on motivation. Count on discipline."</p>
 			<h3 class="cd-headline clip is-full-width">
-				<span>I'm experienced in </span>
+				<span>I AM A </span>
 				<span class="cd-words-wrapper">
-					<b class="is-visible">Web Development</b>
-					<b>PHP</b>
-					<b>Javascript</b>
-					<b>Typescript</b>
-					<b>Java</b>
-					<b>Spring</b>
-					<b>Python</b>
-					<b>Django</b>
-					<b>Agile</b>
-					<b>SQL</b>
-					<b>Bash</b>
-					<b>Docker</b>
+					<b class="is-visible">Web Developer</b>
+					<b>PHP Developer</b>
+					<b>Typescript Developer</b>
+					<b>Javascript Developer</b>
+					<b>Java Developer</b>
+					<b>Spring Developer</b>
+					<b>Python Developer</b>
+					<b>Django Developer</b>
+					<b>Agile Developer</b>
+					<b>C++ Developer</b>
+					<b>Backend Developer</b>
+					<b>Full Stack Developer</b>
 				</span>
 			</h3>
 		</div>
 	</section>
 
+	<!-- Pretty clouds between landing page and home banner -->
 	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
         <path d="M-5 100 Q 0 20 5 100 Z
             M0 100 Q 5 0 10 100
@@ -52,6 +53,68 @@
         </path>
     </svg>
 
+	<!-- Landing Page Section -->
+	<div id="landingpage" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Landing Page</h3>
+                <p>Need a place to go? Welcome aboard, we'll get you where you're going.</p>
+            </div><!-- end title -->
+			
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-left">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".gal_dev">Development</button>
+						<button data-filter=".gal_learn">Learning</button>
+						<button data-filter=".gal_ent">Entertainment</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+				<div class="col-md-4 col-sm-6 gallery-grid gal_dev gal_learn">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-01.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-02.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent gal_dev">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-03.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_learn">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-04.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_learn gal_ent">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-05.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent">
+					<div class="gallery-single fix">
+						<img src="{% static 'uploads/gallery_img-06.jpg' %}" class="img-fluid" alt="Image">
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- About Me Section -->
     <div id="about" class="section wb">
         <div class="container">
             <div class="row">
@@ -74,6 +137,8 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
+
+	<!-- Professional Experience / Projects Section -->
     <div id="experience" class="section lb">
         <div class="container">
             <div class="section-title text-left">
@@ -140,83 +205,8 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
-	<div id="landingpage" class="section lb">
-		<div class="container">
-			<div class="section-title text-left">
-                <h3>Portfolio</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			
-			<div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-left">
-						<button class="active" data-filter="*">All</button>
-						<button data-filter=".gal_a">Web Development</button>
-						<button data-filter=".gal_b">Creative Design</button>
-						<button data-filter=".gal_c">Graphic Design</button>
-					</div>
-				</div>
-			</div>
-			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-01.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-01.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-02.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-02.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-03.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-03.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-04.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-04.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-05.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-05.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-06.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-06.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	</div>
-	
+
+	<!-- Skills breakdown section -->
 	 <div id="skills" class="section wb">
         <div class="container">
             <div class="section-title text-left">
@@ -308,6 +298,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
+	<!-- Personal OC section -->
 	<div id="personalcontent" class="section lb">
 		<div class="container">
 			<div class="section-title text-left">
@@ -426,22 +417,4 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
-
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-left">
-                    <p class="footer-links">
-						<a href="#">Home</a>
-						<a href="#landingpage">Landing Page</a>
-                        <a href="https://github.com/jakesboy2">Github</a>
-                    </p>
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">Jacob Waldrip</a>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
-
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a> 
-
 {% endblock %}
