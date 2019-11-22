@@ -456,7 +456,7 @@ xclip
 	z-index: 1;
 }
 #clouds path {
-    fill: #ffffff;
+    fill: rgb(238, 237, 234);;
     bottom: -10px;
     overflow: hidden;
     stroke: #ffffff;
@@ -486,7 +486,7 @@ xclip
 }
 
 .section.wb {
-    background-color: #ffffff;
+    background-color: rgb(238, 237, 234);
 }
 
 .section.lb {
@@ -1425,7 +1425,7 @@ hr.invis1 {
 
 .filter-button-group button.active{
 	background: #333333;
-	color: #fff;
+	color: rgb(238, 237, 234);
 	box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);	
 }
 
@@ -1436,7 +1436,7 @@ hr.invis1 {
 	font-weight: 600;
 	font-size: 14px;
 	cursor: pointer;
-	background: #fff;
+	background: rgb(238, 237, 234);
 	padding: 12px 40px;
 	border: none;
 	border-radius: 0px;
