@@ -490,7 +490,7 @@ xclip
 }
 
 .section.lb {
-    background-color: #f2f3f5;
+    background-color: #E0DDD4;
 }
 
 .section.db {
@@ -661,7 +661,7 @@ xclip
 	width: 90px;
 	height: 90px;
 	text-align: center;
-	line-height: 90px;
+    line-height: 90px;
 }
 .ser-icon i{
 	font-size: 50px;
