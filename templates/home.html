@@ -18,8 +18,7 @@
 					<b>Spring Developer</b>
 					<b>Python Developer</b>
 					<b>Django Developer</b>
-					<b>Agile Developer</b>
-					<b>C++ Developer</b>
+					<b>SQL Developer</b>
 					<b>Backend Developer</b>
 					<b>Full Stack Developer</b>
 				</span>
@@ -127,10 +126,10 @@
                 <div class="col-md-6">
                     <div class="message-box">                        
                         <h2>About Jacob.</h2>
-                        <p>&nbsp&nbspI am a 24 year old developer from Oklahoma City, born and raised. I spend my time watching sports (Go Cowboys!), and I'm always thinking of a new project to dive into whether its woodworking, programming, or tinkering with electronics and hardware. When I'm not knee deep in my latest project, I'm listening to and making music or spending time with my family, friends, and lovely fiancé. </p>
+                        <p>&nbsp&nbspI am a {{ age }} year old developer from Oklahoma City, born and raised. I spend my time watching sports (Go Cowboys!), and I'm always thinking of a new project to dive into whether its woodworking, programming, or tinkering with electronics and hardware. When I'm not knee deep in my latest project, I'm listening to and making music or spending time with my family, friends, and lovely fiancé. </p>
 						<p>&nbsp&nbspI have a passion for computers, software and hardware, stemming back from a young age. I have gone through my early years knowing this is the path my career and talents would lead me. I will graduate with my Bachelors in Computer Science from the University of Central Oklahoma in the spring semester of 2020. I plan to have a long and fuffilling career in software development and remain absolutely estatic everyday to hone my skills and improve myself. </p>
 
-                        <a href="{% static 'uploads/resume.pdf' %}" class="sim-btn btn-hover-new" data-text="Download" download><span>Download Resumé</span></a>
+                        <a href="{% static 'uploads/resume.pdf' %}" class="sim-btn btn-hover-new" data-text="Download" download onclick="emailOnDownload(); return true;"><span>Download Resumé</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
@@ -204,8 +203,20 @@
                     <div class="testi-carousel owl-carousel owl-theme">
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-heartbeat fa-border"></i> Typescript </h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+								<h3><i class="fa fa-heartbeat fa-border"></i> Typescript </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+								</p>
+								<br>
                             </div>
                         </div>
 						<!-- end testimonial -->
@@ -213,7 +224,19 @@
 						<div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-git fa-border"></i> Git </h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                <br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+								</p>
+								<br>
                             </div>
                         </div>
 						<!-- end testimonial -->
@@ -221,16 +244,40 @@
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-bug fa-border"></i> PHP </h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
                         </div>
 						<!-- end testimonial -->
 						
 						<div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-database fa-border"></i> SQL </h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
 							<br>
 						</div>
 						<!-- end testimonial -->
@@ -238,31 +285,79 @@
 						<div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-users fa-border"></i> Front-End </h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
                         </div>
 						<!-- end testimonial -->
 
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-terminal fa-border"></i> Bash/Command Line </h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
 							<br>
 						</div><!-- end testimonial -->
 
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-edit fa-border"></i> Python </h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
                         </div>
                         <!-- end testimonial -->
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-coffee fa-border"></i> Java </h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                            </div>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
                         </div>
 						<!-- end testimonial -->
 						
@@ -284,60 +379,59 @@
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="{% static 'uploads/blog-01.jpg' %}" class="img-fluid" alt="post-img" />
+							<img src="{% static 'uploads/screepsss.png' %}" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<span>Active</span>
 							</div>
 						</div>
 						<div class="post-info">
-							<h4>Quisque auctor lectus interdum nisl accumsan venenatis.</h4>
+							<h4>Screeps Typescript AI</h4>
 							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li><a href="#"><b> Comments</b></a></li>
+                                <li>by Jacob Waldrip, Brock Sharp</li>
+								<li>| <a href="https://github.com/jakesboy2/screeps-typescript-starter" target="_blank"><b>Github Repo</b></a></li>
+								<li>| Dec 29, 2018 |</li>
                             </ul>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
+							<p>&nbsp&nbspAn AI for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, a game where you are provided an API and write a script to run every few seconds to interact with the game.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="{% static 'uploads/blog-02.jpg' %}" class="img-fluid" alt="post-img" />
+							<img src="{% static 'uploads/tutss.png' %}" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<span>On Hold</span>
 							</div>
 						</div>
 						<div class="post-info">
-							<h4>Quisque auctor lectus interdum nisl accumsan venenatis.</h4>
+							<h4>Javascript Standard Lib</h4>
 							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li><a href="#"><b> Comments</b></a></li>
+								<li>by Jacob Waldrip</li>
+								<br>
+								<li>|<a href="https://github.com/jakesboy2/JS-Standard-Lib" target="_blank"><b> Github Repo</b></a></li>
+								<li>| Jun 27, 2019 |</li>
                             </ul>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
+							<p>&nbsp&nbspA simple "standard library" for Javascript and Typescript. I created this to reduce needing to include bulky libraries for helper functions.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="{% static 'uploads/blog-03.jpg' %}" class="img-fluid" alt="post-img" />
+							<img src="{% static 'uploads/codess.png' %}" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<span>Active</span>
 							</div>
 						</div>
 						<div class="post-info">
-							<h4>Quisque auctor lectus interdum nisl accumsan venenatis.</h4>
+							<h4>Screeps Tutorial Series</h4>
 							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li><a href="#"><b> Comments</b></a></li>
+								<li>by Jacob Waldrip</li>
+								<br>
+                                <li>|<a href="https://www.youtube.com/playlist?list=PLwQgSGt0gSyRH6172-QQXj_u6FDEglJHI" target="_blank"><b> Playlist Link</b></a></li>
+								<li>| Mar 27, 2019 |</li>
                             </ul>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
+							<p>&nbsp&nbspA tutorial for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, meant to help players who are new to programming get started in building their AI.</p>
 						</div>
 					</div>
 				</div>

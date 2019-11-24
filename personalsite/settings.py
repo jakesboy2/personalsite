@@ -127,3 +127,9 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'jakeywaldrip@gmail.com'
+EMAIL_HOST_PASSWORD = 'pyyhgzerlbmehjdi'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
