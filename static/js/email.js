@@ -26,6 +26,4 @@ function emailOnDownload() {
     });
 };
 
-function success(result) {
-    alert('Process achieved!');
-};
+function success(result) {};
