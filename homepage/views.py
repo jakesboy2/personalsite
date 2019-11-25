@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
 import time
 
 
@@ -14,6 +15,7 @@ def index(request):
     return render(request, 'home.html', { 'app_url': app_url, 'age': age })
 
 # Send an email to myself when my resume is downloaded
+@csrf_exempt
 def email_on_download(request):
     send_mail(
         'Resume Downloaded',

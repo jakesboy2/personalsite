@@ -133,3 +133,5 @@ EMAIL_HOST_USER = 'jakeywaldrip@gmail.com'
 EMAIL_HOST_PASSWORD = 'pyyhgzerlbmehjdi'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+ALLOWED_HOSTS = ['www.jacobwaldrip.com']
