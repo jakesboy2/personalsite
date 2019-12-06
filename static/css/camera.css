@@ -97,14 +97,11 @@
 	z-index: 2;
 }
 .camera_target_content .camera_link {
-    background: url(../images/blank.gif);
 	display: block;
 	height: 100%;
 	text-decoration: none;
 }
 .camera_loader {
-    background: #fff url(../images/camera-loader.gif) no-repeat center;
-	background: rgba(255, 255, 255, 0.9) url(../images/camera-loader.gif) no-repeat center;
 	border: 1px solid #ffffff;
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
@@ -394,34 +391,24 @@
 *
 **************************/
 .pattern_1 .camera_overlayer {
-	background: url(../images/patterns/overlay1.png) repeat;
 }
 .pattern_2 .camera_overlayer {
-	background: url(../images/patterns/overlay2.png) repeat;
 }
 .pattern_3 .camera_overlayer {
-	background: url(../images/patterns/overlay3.png) repeat;
 }
 .pattern_4 .camera_overlayer {
-	background: url(../images/patterns/overlay4.png) repeat;
 }
 .pattern_5 .camera_overlayer {
-	background: url(../images/patterns/overlay5.png) repeat;
 }
 .pattern_6 .camera_overlayer {
-	background: url(../images/patterns/overlay6.png) repeat;
 }
 .pattern_7 .camera_overlayer {
-	background: url(../images/patterns/overlay7.png) repeat;
 }
 .pattern_8 .camera_overlayer {
-	background: url(../images/patterns/overlay8.png) repeat;
 }
 .pattern_9 .camera_overlayer {
-	background: url(../images/patterns/overlay9.png) repeat;
 }
 .pattern_10 .camera_overlayer {
-	background: url(../images/patterns/overlay10.png) repeat;
 }
 .camera_caption {
 	color: #fff;
