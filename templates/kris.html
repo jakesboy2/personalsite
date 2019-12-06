@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/main-banner.jpg' %}')">
+    <div class="heading">
+        <h1>"{{ fact }}"</h1>
+        <p> - Kris</p>
+        <br><br>
+        <button class="btn btn-primary" onClick="window.location.reload();">Get Another?</button>
+    </div>
+</section>
+
+{% endblock %}
