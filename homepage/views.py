@@ -62,7 +62,11 @@ def kris_facts(request):
         "I hate breast cancer supporters.",
         "Rest in peps",
         "I like my women like I like my coffee. Dark and bitter.",
+<<<<<<< HEAD
         "You guy's don't?"
+=======
+        "You guy's don't?",
+>>>>>>> e7e6d24497dad848aad0506890564811478262be
         "How often do men throw money at me? Often enough.",
         "I'm rebooting the server guys give me a second.",
         "Don't talk about my body, I don't have any armor.",
