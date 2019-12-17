@@ -16,6 +16,7 @@ def index(request):
     age = int(year) - 1995
     return render(request, 'home.html', { 'app_url': app_url, 'age': age })
 
+# Render the screeps page
 def screeps(request):
     app_url = request.path
     return render(request, 'screeps.html', {'app_url': app_url})
