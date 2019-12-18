@@ -43,7 +43,7 @@
                 <div class="col-md-6">
                     <div class="message-box pull-left">     
                         <!-- About Screeps Actual Div-->                   
-                        <div id="about-screeps">
+                        <div id="about-screeps" class="hidden-heading">
                             <div class="section-title text-center">
                                 <h3>About Screeps</h3>
                                 <hr>
@@ -55,10 +55,27 @@
                         </div>
 
                         <!-- Content Box For About Screeps -->
-                        <div id="about-code-content" class="card-1 hidden-heading">
+                        <div id="about-code-content" class="card-1">
                             <h2> Our Philosophy </h2>
                             <hr>
-                            <p>This is a simple demonstration of how things will look as we continue to type them and it wraps on another line.</p>
+                            <p style="text-align: left;"> &nbsp&nbspWe hold certain development principles in high regard when it comes to developing our code. Constant <b>refactoring</b>, <b>rethinking</b>, and <b>reimplmenting</b>
+                                features in an attempt to make them cleaner, more effective, and less prone to errors is a constant battle that we seek to win.
+                            <br><br> &nbsp&nbsp<b>Maintainability</b> is our top priority. After finishing a major feature we come together and discuss what can be improved. Often times, this means abstracting functionality
+                            into various design patterns, functions, or classes. Constant discussions and changes are considered and completed to restructure our AI in a way that will make it easier to work with based on 
+                            our most common pain-points. 
+                            <br><br> &nbsp&nbsp We make use of various <b>design patterns</b> often within our development. There is also a high emphisis on principles meant to reduce coupling and increase coherence.
+                            <hr><br>
+                            <ul>
+                                <li><h3>Our Favorite Principles</h3></li>
+                                <li><i><p>Click one to learn more</p></i></li>
+                            </ul>
+                            <ul class="list-group">
+                                <li id="list-sp" class="list-group-item list-group-item-action">Strategy Pattern</li>
+                                <li id="list-dry" class="list-group-item list-group-item-action">Don't Repeat Yourself</li>
+                                <li id="list-cp" class="list-group-item list-group-item-action">Command Pattern</li>
+                                <li id="list-todo" class="list-group-item list-group-item-action"><strike>TO</strike>DO</li>
+                            </ul>
+                        </p>
                         </div>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
@@ -67,7 +84,7 @@
                     <div class="message-box pull-right">
 
                         <!-- Button Section For About Our Code-->
-                        <div id="about-code" class="hidden-heading">
+                        <div id="about-code">
                             <div class="section-title text-center">
                                 <h3> About Our AI </h3>
                                 <hr>
@@ -81,14 +98,61 @@
                         </div>
 
                         <!-- Content Box For About Screeps -->
-                        <div id="about-screeps-content" class="card-1">
+                        <div id="about-screeps-content" class="card-1 hidden-heading">
                             <h2> What Is Screeps? </h2>
                             <hr>
-                            <p>This is a simple demonstration of how things will look as we continue to type them and it wraps on another line.</p>
+                            <p style="text-align: left;">
+                                    &nbsp&nbspScreeps is a massive multiplayer online real-time strategy game. Each player can create their own colony in a single persistent world shared by all players.
+                                <br><br> &nbsp&nbspUsing the game's provided <a href="https://docs.screeps.com/api/" target="_blank">API</a>, you program your AI in Javascript, Typescript, or any language that compiles into 
+                                web assembly.
+                                <br><br> &nbsp&nbspYou control every aspect of the game from your code. Every 'tick' (roughly 2.5-3.5 seconds real-time), player's scripts are ran and intents are queued based on the results
+                                of your code. Intents include things such as calling a method on an instance of a Spawn object to create a new <a href="https://docs.screeps.com/creeps.html" target="_blank">creep</a>, moving a creep in a particular direction, upgrading your room,
+                                attacking another player, harvesting resources, and building or repairing various structures.
+                                <br><br> &nbsp&nbspYour code runs even when you are offline. The world is always running. Because of its nature as a sandbox game, there are no win-conditions or goals; however, there is a leaderboard
+                                that tracks the amount of energy you have used to upgrade your rooms. Claiming more rooms gives you more opportunity to gain control points, more territory in the world, and more notoriety amoung other players.
+                                <br><br> &nbsp&nbspThere is a global market place you can use to trade resources with other players, and various powerful players have come together to create alliances which has resulted in large scale world wars breaking out. <br><br><br>
+                            </p>
                         </div>
                     </div><!-- end media -->
                 </div><!-- end col -->
             </div><!-- end row -->
+
+            <!-- Modals for describing the list items on the ABOUT CODE section of this page -->
+            <!-- SP MODAL -->
+            <div id="list-sp-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <p>
+                        This is the SP MODAL
+                    </p>
+                </div>
+            </div>
+
+            <!-- DRY MODAL -->
+            <div id="list-dry-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <p>
+                        This is the DRY MODAL
+                    </p>
+                </div>
+            </div>
+
+            <!-- CP MODAL -->
+            <div id="list-cp-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <p>
+                        This is the CP MODAL
+                    </p>
+                </div>
+            </div>
+
+            <!-- TODO MODAL -->
+            <div id="list-todo-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <p>
+                        This is the TODO MODAL
+                    </p>
+                </div>
+            </div>
 
             <div class="row" style="padding-top: 100px;">
                 <div class="col-sm-12">

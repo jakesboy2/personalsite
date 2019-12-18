@@ -51,5 +51,11 @@ facts = [
     "Logan is chaotic evil.",
     "Logan is not a good man.",
     "Jasmin is lawful neutral.",
-    "Cooper is a good man."
+    "Cooper is a good man.",
+    "These nugs are dank.",
+    "My mouth has never been so full.",
+    "If you met me in a past life, would you still hate me?",
+    "The kind ladies next door gave us a full cake from Zoes.",
+    "Jacob is like me, but with pants.",
+    "This cake is so rich."
 ]
