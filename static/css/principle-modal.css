@@ -13,8 +13,8 @@
   
 /* Modal Content/Box */
 .p-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background-color: rgb(238, 237, 234);
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 40%;
@@ -22,4 +22,34 @@
 
 .hide-modal {
     display: none;    
+}
+
+/* Styles for the inside of the modal */
+.p-modal-content h3 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 300;
+    padding: 0 0 10px;
+    margin: 0;
+    line-height: 62px;
+    margin-top: 0;
+    text-transform: none;
+}
+
+ .a-override {
+    color: black;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.80857;
+}
+
+.a-override-alt {
+    color: #808080;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.80857;
+}
+
+.p-modal-content li {
+    text-align: center;
 }

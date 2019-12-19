@@ -72,7 +72,7 @@
                             <ul class="list-group">
                                 <li id="list-sp" class="list-group-item list-group-item-action">Strategy Pattern</li>
                                 <li id="list-dry" class="list-group-item list-group-item-action">Don't Repeat Yourself</li>
-                                <li id="list-cp" class="list-group-item list-group-item-action">Command Pattern</li>
+                                <li id="list-cp" class="list-group-item list-group-item-action">Configuration & Constants</li>
                                 <li id="list-todo" class="list-group-item list-group-item-action"><strike>TO</strike>DO</li>
                             </ul>
                         </p>
@@ -121,8 +121,66 @@
             <!-- SP MODAL -->
             <div id="list-sp-modal" class="p-modal hide-modal">
                 <div class="p-modal-content">
-                    <p>
-                        This is the SP MODAL
+                    <h3>Strategy Pattern</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                        &nbsp&nbsp We make use of this design pattern more than any other in our code-base. This was the result of our first major refactor. The issue 
+                       that we were trying to solve was the amount of switch statements whose only purpose was to decide what helper function to call.
+                       Eventually, an idea was born. To demonstrate the concept and our application of it, I will use our API function that generates the 
+                       spawning limits for each room.
+                       <br><br>&nbsp&nbsp For a quick introduction to the context here, we have our room split up into multiple 'Room States' based on conditions being met
+                       such as, the amount of energy available, the presence of particular structures, and the presence of option flags. To replace the switch statement that decided how many of 
+                       each creep we wanted at each room state, we needed a way to abstract out the entire concept of creep limits and have a file for each room state we want to configure the limits for.
+                       <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                       <ul style="padding: 10px;" class="list-group">
+                           <!-- Interface Step -->
+                           <a href="/static/screenshots/interface.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                               <h4><u>Define Interface</u></h4>
+                               The first step is to set up an interface to use for generating the spawn limits for the room. This contains the definitions for 
+                               generating domestic and remote limits, as well as a property reference to the name of the current room state. This is so we can find it at run-time.
+                            </li></a>
+                            
+                            <!-- Instance Def Step -->
+                            <a href="/static/screenshots/instance-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Implementation Set-up</u></h4>
+                                We then defined a class that implements the interface from the previous step, for every room state we wanted to use. The only trick here is defining 
+                                the name of the current room state as defined in class we are in, and binding the methods to the instance of this object.
+                            </li></a>
+
+                            <!-- generate instance Step -->
+                            <a href="/static/screenshots/generate-instance.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Implementation Meat & Bones</u></h4>
+                                This is where we actual set up the specific room state's implementation. For this room state, we create and return the object containing all of the 
+                                creep roles we want to define limits for. This same process is done below on the remote limits as well, as they are split into different methods for 
+                                maintainability. 
+                            </li></a>
+
+                            <!-- Constant array Step -->
+                            <a href="/static/screenshots/constant-arr.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Array of Implementation Instances</u></h4>
+                                Here we simply define an array that contains the instance of each of these implementations. This is the array we will use to decide at run-time which instance 
+                                we are going to call for each unique situation and state the code can be in at any given time. 
+                            </li></a>
+                            
+                            <!-- generate abstract Step -->
+                            <a href="/static/screenshots/generate-abstract.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Select an Implementation at Run-time</u></h4>
+                                For this step, we get the room state of the current room, and loop over the array created in the previous step until we find a match. From there we simply 
+                                return the value of that implmentation's method. This allows each room to get its own custom object that defines the spawn limits for itself.
+                            </li></a>
+
+                            <!-- Set limits Step -->
+                            <a href="/static/screenshots/set-limits.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Setting the Limits</u></h4>
+                                In here, we use our Memory API to update the limits for the room, by passing in the room we are updating, and the object returned from that room's configured limits 
+                                for this room state, generated using the above steps. The exception here is generating a military creep queue, because it works off a queue instead of limits; however, remote 
+                                and domestic creeps are generated using the strategy pattern as described here. 
+                            </li></a>
+                       </ul>
+                       <hr>
+                       <p style="padding: 10px">&nbsp&nbsp These steps are repeated for several modules of our code. Namely, creep roles, creep spawning helpers (options, name, target/home rooms, etc), flag handlers, and spawn limits.
+                       This design pattern provides a powerful tool for separating your logic and clearly seeing where each section of each state the room can be in is defined for easy maintainence, reliability,
+                       and bug-squashing.</p>
                     </p>
                 </div>
             </div>
@@ -130,8 +188,47 @@
             <!-- DRY MODAL -->
             <div id="list-dry-modal" class="p-modal hide-modal">
                 <div class="p-modal-content">
-                    <p>
-                        This is the DRY MODAL
+                    <h3>Don't Repeat Yourself</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                        The rational behind this pattern involves not wanting to duplicate code. This has two reason: making refactoring and code changes simpler and less prone to bugs, and reducing overall development time.
+                        <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                        <hr><h3> Memory Access </h3>
+                        <ul style="padding: 10px;" class="list-group">
+                            <!-- Set limits Step -->
+                            <a href="/static/screenshots/get-fill-jobs.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Example 1</u></h4>
+                                Every creep that needs to get these jobs uses this function. Theres no reason to manually search the array from memory yourself, and if we change how we 
+                                want to get the fill jobs, or what we consider a fill job, we can change it here and the changes will reflect on every creep.
+                            </li></a>
+
+                            <!-- Example 2 -->
+                            <a href="/static/screenshots/get-struct-type.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Example 2</u></h4>
+                                Getting an array of structure of a particular type. This is used extensively throughout the code and saves an incredible amount of space and keeps the code clean.
+                            </li></a>
+                       </ul>
+
+                       <hr><h3> Creep Processes </h3>
+                       <ul style="padding: 10px;" class="list-group">
+                            <!-- Example 1 -->
+                            <a href="/static/screenshots/travel-to.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Example 1</u></h4>
+                                This function is used on every creep as well. It is the abstracted out movement function for creeps, which has logic such as routing around hostile rooms, using specific 
+                                movement matrices, and updating the memory for empire scouting.
+                            </li></a>
+
+                            <!-- Example 2 -->
+                            <a href="/static/screenshots/move-off-exit.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Example 2</u></h4>
+                                This function is used in the manager for every creep. It detects if the creep is on an exit tile, and moves them off of it.
+                            </li></a>
+                       </ul>
+                       <hr>
+                       <p style="padding: 10px">&nbsp&nbsp This principle is followed as much as possible, and is the entire rationale behind our Memory API. 
+                        Instead of handling error cases and stale data on every memory access, we can go through the Memory API and always make sure we 
+                        have the data we need, error free, when we need it. In addition, if you change the path or logic behind something, you only need to change 
+                        it in one place, rather than every place the feature or logic is used. </p>
                     </p>
                 </div>
             </div>
@@ -139,17 +236,62 @@
             <!-- CP MODAL -->
             <div id="list-cp-modal" class="p-modal hide-modal">
                 <div class="p-modal-content">
-                    <p>
-                        This is the CP MODAL
-                    </p>
+                    <h3>Configuration & Constants</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                            This principle is similar to the previous one, in that it allows for quick code changes and configuration, and consistant behavior and values across multiple usages.
+                            <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                            <hr><h3> CPU Management </h3>
+                            <ul style="padding: 10px;" class="list-group">
+                                <!-- Set limits Step -->
+                                <a href="/static/screenshots/config-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                    <h4><u>Definition</u></h4>
+                                    We define the various limits for running each module of our code. These are the minimum value of the bucket to be to run that module.
+                                </li></a>
+    
+                                <!-- Example 2 -->
+                                <a href="/static/screenshots/config-impl.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                    <h4><u>Usage</u></h4>
+                                    We take the defined configuration values and compare them to the bucket to decide if we have enough bucket to justify running the module.
+                                </li></a>
+                           </ul>
+    
+                           <hr><h3> Constant Usage </h3>
+                           <ul style="padding: 10px;" class="list-group">
+                                <!-- Example 1 -->
+                                <a href="/static/screenshots/constant-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                    <h4><u>Definition</u></h4>
+                                    This provides us with consistent string values to represent our creep roles. Without this, the potential for accidently misspelling or capitalizing something wrong increases the chance for errors.
+                                </li></a>
+    
+                                <!-- Example 2 -->
+                                <a href="/static/screenshots/constant-impl.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                    <h4><u>Usage</u></h4>
+                                    Here is an example of us using these creep role constants to reference a role to make a decision about logic.
+                                </li></a>
+                           </ul>
+                           <hr>
+                           <p style="padding: 10px">&nbsp&nbsp This principle is followed as much as possible as well. The idea is we can make quick changes to our configuration and tweak numbers slightly to come up with 
+                            an effective and efficient setup that allows us to manage our economy and CPU usage without making code changes. You can simply change a value in the configuration. The constants also help with keeping 
+                            our code clean, clear, and error free.</p>
+                        </p>
                 </div>
             </div>
 
             <!-- TODO MODAL -->
             <div id="list-todo-modal" class="p-modal hide-modal">
                 <div class="p-modal-content">
+                    <h3><strike>TO</strike>DO</h3>
+                    <hr>
                     <p>
-                        This is the TODO MODAL
+                            &nbsp&nbspI can't really think of a way to provide examples and screenshots for this, so the best I can do is provide the rationale behind this principle. 
+                            Essentially, I find myself often writing a TODO comment to abstract something into a function, or improve the logic for a situation in an attempt to just get the working product out ASAP.
+                            What we attempt to do in this case is simply delete the comment, and do what we were writing the comment for. 
+                            <br><br>&nbsp&nbsp There has to be a balance here, you don't want to spend a ton of time going down a rabbit hole on a feature you might not even end up needing because you discover you need to redesign 
+                            the feature as you progress through its development. The line lies in making sure you keep up with your TODO comments and issues as you finish features to make sure you don't collect a large 
+                            backlog of incomplete features to build your future code off of. 
+                            <br><br>&nbsp&nbsp This also supports constant refactoring. We always look for chances to re-evaluate our code and find places to improve. This has resulted in a code base that has been in 
+                            development now for over a year and has maintained clean and easy to add features and fix bugs within.
                     </p>
                 </div>
             </div>

@@ -57,5 +57,6 @@ facts = [
     "If you met me in a past life, would you still hate me?",
     "The kind ladies next door gave us a full cake from Zoes.",
     "Jacob is like me, but with pants.",
-    "This cake is so rich."
+    "This cake is so rich.",
+    "I've got the Fuman, I just need 'Chu."
 ]
