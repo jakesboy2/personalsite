@@ -174,6 +174,10 @@ $(document).ready(function (){
 
     // Remove the hidden class from the specific div
     function showOne(bio) {
+        const wrapper = $('#creep-bio-div');
+        if(!wrapper.hasClass('new-left-padding')) {
+            wrapper.addClass('new-left-padding');
+        }
         bio.removeClass('hidden-heading');
     }
 });
