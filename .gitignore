@@ -1,3 +1,6 @@
 .DS_Store
 homepage/__pycache/
+
+#ignore files from setting up venv / python
 .vscode/settings.json
+screeps_env/
