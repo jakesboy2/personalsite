@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
+from .api import router
 
 urlpatterns = [
     # Admin Panel
@@ -12,7 +13,10 @@ urlpatterns = [
     path('', lambda request: redirect('/home/', permanent=True)),
     
     # Home Page App
-    path('home/', include('homepage.urls'))
+    path('home/', include('homepage.urls')),
+
+    # API Paths
+    path('api/v1/', include(router.urls))
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

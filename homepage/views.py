@@ -7,8 +7,6 @@ import time
 import random
 from  .constants import facts
 
-# Create your views here.
-
 # Render the home page
 def index(request):
     app_url = request.path
